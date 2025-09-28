@@ -1,7 +1,7 @@
 import React from 'react'
 export default function Structure({ t, lang }){
   const items = lang==='ar'
-    ? ['رئيسة المجلس','نائبة الرئيس','لجنة التقنية والتطوير','لجنة الشكاوى والاقتراحات','لجنة التواصل والإعلام']
+    ? ['رئيسة المجلس','نائبة الرئيس','لجنة التقنية والتطوير','لجنة الشكاوى والمقترحات','لجنة التواصل والإعلام']
     : ['Council President','Vice President','Technology Committee','Activities Committee','Communications & Media Committee']
   return (
     <div className="paper" style={{marginTop:20}}>

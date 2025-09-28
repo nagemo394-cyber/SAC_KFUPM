@@ -6,14 +6,14 @@ import Achievements from '../pages/Achievements.jsx'
 import Structure from '../pages/Structure.jsx'
 
 const STRINGS = {
-  en: { brand:"Student Advisory Council", home:"Home", complaints:"Complaints", achievements:"Achievements", structure:"Council Structure",
+  en: { brand:"Student Advisory Council", home:"Home", complaints:"Complaints and Suggestions", achievements:"Achievements", structure:"Council Structure",
         heroTitle:"Welcome to the official website of the Student Advisory Council at KFUPM",
         heroBody:"This prototype lets you browse the council's info and submit complaints easily.",
         ctaComplaints:"Go to Complaints", ctaLearn:"Learn more", footerNote:"Colors & style inspired by official identity", lang:"Language" },
-  ar: { brand:"المجلس الاستشاري الطلابي", home:"الرئيسية", complaints:"الشكاوى", achievements:"إنجازات المجلس", structure:"هيكلة المجلس",
-        heroTitle:"المجلس الاستشاري الطلابي — جامعة الملك فهد للبترول والمعادن",
+  ar: { brand:"المجلس الاستشاري الطلابي", home:"الرئيسية", complaints:"الشكاوى والمقترحات", achievements:"إنجازات المجلس", structure:"هيكلة المجلس",
+        heroTitle:"المجلس الاستشاري الطلابي التابع لعمادة شؤون الطلاب في جامعة الملك فهد للبترول والمعادن",
         heroBody:"لتمثيل صوت الطلاب وتأكيد دورهم في صناعة القرار",
-        ctaComplaints:"الذهاب لصفحة الشكاوى", ctaLearn:"اعرف المزيد", footerNote:"جميع الحقوق محفوظة", lang:"اللغة" }
+        ctaComplaints:"الذهاب لصفحة الشكاوى والمقترحات", ctaLearn:"اعرف المزيد", footerNote:"جميع الحقوق محفوظة", lang:"اللغة" }
 }
 
 export default function App(){
