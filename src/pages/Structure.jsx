@@ -12,7 +12,6 @@ export default function CouncilStructure({ t, lang = 'ar' }) {
         'إياد سالم': 'Eyad Ahmed Salem',
         'زياد تفاحة': 'Zeyad Tuffaha',
         'شهد خواهر': 'Shahad Khawaher',
-        'عدي باشراحيل': 'Odey Bashraheel',
         'محمد الرومي': 'Mohammed Alroomi',
         'مهدي المطوع': 'Mahdi Almutawa',
         'نعيمة الهاشم': 'Naimah Alsaidalhashim',
@@ -26,15 +25,24 @@ export default function CouncilStructure({ t, lang = 'ar' }) {
         'رغد فؤاد': 'Raghad Kalantan',
         'سفانه جعر': 'Sefana Guar',
         'عمر نجم': 'Omar Nizhim',
-        'جواهر العجلان': 'Jawaher Alajlan',
-        'محمد الحصيني': 'Mohammed Alhusaini',
-        'صبا الجهني': 'Saba Aljohani'
+        'جواهر العجلان': 'Jawaher Mohammed Alajlan',
+        'محمد الحصيني': 'Mohamed Khalid Alhusini',
+        'صبا الجهني': 'Saba Salman Aljohani',
+        'حوراء الخلف': 'Hawraa Basheer Alkhalaf'
     };
 
     const majors = {
         'تخصص': 'Major',
         'الهندسة الكيميائية': 'Chemical Engineering',
-        'قائد الفريق': 'Team Leader'
+        'قائد الفريق': 'Team Leader',
+        'هندسة البرمجيات': 'Software Engineering',
+        'المحاسبة': 'Accounting',
+        'هندسة الحاسب': 'Computer Engineering',
+        'الهندسة الفضائية': 'Aerospace Engineering',
+        'الهندسة الميكانيكية': 'Mechanical Engineering',
+        'هندسة البترول': 'Petroleum Engineering',
+        'الهندسة الكهربائية': 'Electrical Engineering',
+        'المالية': 'Finance'
     };
 
     const getName = (arabicName) => {
@@ -65,7 +73,7 @@ export default function CouncilStructure({ t, lang = 'ar' }) {
             leader: {
                 name: "عبدالله السيف",
                 email: "s202372410@kfupm.edu.sa",
-                major: "تخصص"
+                major: "المالية"
             },
             teams: [
                 {
@@ -74,36 +82,37 @@ export default function CouncilStructure({ t, lang = 'ar' }) {
                         {
                             name: "إياد سالم",
                             role: "قائد الفريق",
-                            email: "s202368990@kfupm.edu.sa"
+                            email: "s202368990@kfupm.edu.sa",
+                            major: "هندسة الحاسب"
                         },
                         {
                             name: "نعيمة الهاشم",
-                            major: "تخصص",
+                            major: "الهندسة الكهربائية",
                             email: "s202271860@kfupm.edu.sa"
                         },
                         {
                             name: "يزيد الغامدي",
-                            major: "تخصص",
+                            major: "الهندسة الميكانيكية",
                             email: "s202243980@kfupm.edu.sa"
                         },
                         {
                             name: "محمد الحصيني",
-                            major: "تخصص",
-                            email: "mohammed.alhusaini@example.com"
+                            major: "هندسة البرمجيات",
+                            email: "s202029480@kfupm.edu.sa"
                         },
                         {
                             name: "عبدالمجيد الفيفي",
-                            major: "تخصص",
+                            major: "الهندسة الميكانيكية",
                             email: "s202355890@kfupm.edu.sa"
                         },
                         {
                             name: "ريا البلوي",
-                            major: "تخصص",
+                            major: "الهندسة الفضائية",
                             email: "s202272100@kfupm.edu.sa"
                         },
                         {
                             name: "أبرار السفياني",
-                            major: "تخصص",
+                            major: "الهندسة الفضائية",
                             email: "s202268260@kfupm.edu.sa"
                         }
                     ]
@@ -112,39 +121,39 @@ export default function CouncilStructure({ t, lang = 'ar' }) {
                     teamName: lang === 'ar' ? "فريق الأنشطة الطلابية" : "Student Activities Team",
                     members: [
                         {
-                            name: "عدي باشراحيل",
-                            role: "قائد الفريق",
-                            email: "s202183650@kfupm.edu.sa"
-                        },
-                        {
                             name: "سعيد الجعران",
-                            major: "تخصص",
+                            major: "الهندسة الميكانيكية",
                             email: "s202165130@kfupm.edu.sa"
                         },
                         {
                             name: "عبدالعزيز نواز",
-                            major: "تخصص",
+                            major: "المحاسبة",
                             email: "s202279920@kfupm.edu.sa"
                         },
                         {
                             name: "مهدي المطوع",
-                            major: "تخصص",
+                            major: "هندسة البترول",
                             email: "s202261800@kfupm.edu.sa"
                         },
                         {
                             name: "علي المبارك",
-                            major: "تخصص",
+                            major: "الهندسة الميكانيكية",
                             email: "s202258220@kfupm.edu.sa"
                         },
                         {
                             name: "جواهر العجلان",
-                            major: "تخصص",
+                            major: "الهندسة الفضائية",
                             email: "s202271760@kfupm.edu.sa"
                         },
                         {
                             name: "زياد تفاحة",
-                            major: "تخصص",
+                            major: "الهندسة الميكانيكية",
                             email: "s202267480@kfupm.edu.sa"
+                        },
+                        {
+                            name: "رغد فؤاد",
+                            major: "هندسة البرمجيات",
+                            email: "s202256260@kfupm.edu.sa"
                         }
                     ]
                 }
@@ -156,27 +165,27 @@ export default function CouncilStructure({ t, lang = 'ar' }) {
             leader: {
                 name: "منيرة الدوسري",
                 email: "s202257120@kfupm.edu.sa",
-                major: "تخصص"
+                major: "الهندسة الكيميائية"
             },
             members: [
                 {
                     name: "سلمان العدوان",
-                    major: "تخصص",
+                    major: "هندسة الحاسب",
                     email: "s202244180@kfupm.edu.sa"
                 },
                 {
-                    name: "رغد فؤاد",
-                    major: "تخصص",
-                    email: "s202256260@kfupm.edu.sa"
-                },
-                {
                     name: "شهد خواهر",
-                    major: "تخصص",
+                    major: "الهندسة الفضائية",
                     email: "s202259700@kfupm.edu.sa"
                 },
                 {
+                    name: "حوراء الخلف",
+                    major: "الهندسة الكهربائية",
+                    email: "s202265960@kfupm.edu.sa"
+                },
+                {
                     name: "عمر نجم",
-                    major: "تخصص",
+                    major: "الهندسة الفضائية",
                     email: "s202345270@kfupm.edu.sa"
                 }
             ]
@@ -187,27 +196,27 @@ export default function CouncilStructure({ t, lang = 'ar' }) {
             leader: {
                 name: "فرح حماد",
                 email: "s202257640@kfupm.edu.sa",
-                major: "تخصص"
+                major: "هندسة البرمجيات"
             },
             members: [
                 {
                     name: "محمد الرومي",
-                    major: "Software Engineering",
+                    major: "هندسة البرمجيات",
                     email: "s202250760@kfupm.edu.sa"
                 },
                 {
                     name: "صبا الجهني",
-                    major: "تخصص",
-                    email: "s2023341930@kfupm.edu.sa"
+                    major: "هندسة البرمجيات",
+                    email: "s202341930@kfupm.edu.sa"
                 },
                 {
                     name: "فرقان السلمان",
-                    major: "تخصص",
+                    major: "هندسة البرمجيات",
                     email: "s202278520@kfupm.edu.sa"
                 },
                 {
                     name: "عمر نجم",
-                    major: "تخصص",
+                    major: "الهندسة الفضائية",
                     email: "s202345270@kfupm.edu.sa"
                 }
             ]
@@ -322,7 +331,8 @@ export default function CouncilStructure({ t, lang = 'ar' }) {
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))',
             gap: '20px',
-            marginBottom: '20px'
+            marginBottom: '20px',
+            justifyItems: 'center'
         },
         memberCard: {
             padding: '20px',
@@ -425,8 +435,9 @@ export default function CouncilStructure({ t, lang = 'ar' }) {
             >
                 <div style={styles.memberPhoto}>{initial}</div>
                 <div style={styles.memberInfo}>
+                    {member.role && <div style={{...styles.leaderBadge, marginBottom: '8px'}}>{getMajor(member.role)}</div>}
                     <div style={styles.memberName}>{getName(member.name)}</div>
-                    <div style={styles.memberMajor}>{getMajor(displayRole)}</div>
+                    <div style={styles.memberMajor}>{getMajor(member.major || displayRole)}</div>
                     <div style={styles.memberEmail}>{member.email}</div>
                 </div>
             </div>
@@ -438,10 +449,12 @@ export default function CouncilStructure({ t, lang = 'ar' }) {
             <div style={styles.container}>
                 <div style={styles.header}>
                     <img src="/logo.png" alt="Council logo" style={styles.logo} />
-                    <h1 style={styles.title}>المجلس الاستشاري الطلابي</h1>
-                    <p style={styles.subtitle}>SAC</p>
-                    <h2 style={styles.sectionTitle}>هيكلة المجلس</h2>
-                    <p style={styles.sectionSubtitle}>Council's Structure</p>
+                    <h1 style={styles.title}>
+                        {lang === 'ar' ? 'المجلس الاستشاري الطلابي' : 'Student Advisory Council'}
+                    </h1>
+                    <h2 style={styles.sectionTitle}>
+                        {lang === 'ar' ? 'هيكلة المجلس' : "Council's Structure"}
+                    </h2>
                 </div>
 
                 {/* Council Management */}
