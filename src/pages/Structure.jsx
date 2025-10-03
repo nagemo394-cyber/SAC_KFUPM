@@ -1,13 +1,70 @@
 import React from 'react';
 
 export default function CouncilStructure({ t, lang = 'ar' }) {
+    // Name translations
+    const names = {
+        'فرقان السلمان': 'Forkan Alsalman',
+        'عبدالعزيز نواز': 'Abdulaziz Nawwaz',
+        'غيداء التمياط': 'Ghaida Altimyat',
+        'سلمان العدوان': 'Salman Aladwan',
+        'يزيد الغامدي': 'Yazeed Alghamdi',
+        'فرح حماد': 'Farah Hammad',
+        'إياد سالم': 'Eyad Ahmed Salem',
+        'زياد تفاحة': 'Zeyad Tuffaha',
+        'شهد خواهر': 'Shahad Khawaher',
+        'عدي باشراحيل': 'Odey Bashraheel',
+        'محمد الرومي': 'Mohammed Alroomi',
+        'مهدي المطوع': 'Mahdi Almutawa',
+        'نعيمة الهاشم': 'Naimah Alsaidalhashim',
+        'أبرار السفياني': 'Abrar Alsufyani',
+        'منيرة الدوسري': 'Munirah Aldawsari',
+        'سعيد الجعران': 'Saeed Aljaran',
+        'ريا البلوي': 'Ria Al Balawi',
+        'عبدالله السيف': 'Abdullah Alsaif',
+        'عبدالمجيد الفيفي': 'Abdulmajeed Alfaifi',
+        'علي المبارك': 'Ali Almubarak',
+        'رغد فؤاد': 'Raghad Kalantan',
+        'سفانه جعر': 'Sefana Guar',
+        'عمر نجم': 'Omar Nizhim',
+        'جواهر العجلان': 'Jawaher Alajlan',
+        'محمد الحصيني': 'Mohammed Alhusaini',
+        'صبا الجهني': 'Saba Aljohani'
+    };
+
+    const majors = {
+        'تخصص': 'Major',
+        'الهندسة الكيميائية': 'Chemical Engineering',
+        'قائد الفريق': 'Team Leader'
+    };
+
+    const getName = (arabicName) => {
+        return lang === 'ar' ? arabicName : (names[arabicName] || arabicName);
+    };
+
+    const getMajor = (arabicMajor) => {
+        return lang === 'ar' ? arabicMajor : (majors[arabicMajor] || arabicMajor);
+    };
+
+    const management = {
+        president: {
+            name: 'غيداء التمياط',
+            email: 's202253540@kfupm.edu.sa',
+            major: 'الهندسة الكيميائية'
+        },
+        vicePresident: {
+            name: 'سفانه جعر',
+            email: 's202277340@kfupm.edu.sa',
+            major: 'الهندسة الكيميائية'
+        }
+    };
+
     const committees = [
         {
             id: 1,
             name: lang === 'ar' ? "لجنة تجربة الطالب" : "Student Experience Committee",
             leader: {
                 name: "عبدالله السيف",
-                email: "abdullah.alsaif@example.com",
+                email: "s202372410@kfupm.edu.sa",
                 major: "تخصص"
             },
             teams: [
@@ -16,18 +73,18 @@ export default function CouncilStructure({ t, lang = 'ar' }) {
                     members: [
                         {
                             name: "إياد سالم",
-                            role: lang === 'ar' ? "قائد الفريق" : "Team Leader",
-                            email: "eyad.salem@example.com"
+                            role: "قائد الفريق",
+                            email: "s202368990@kfupm.edu.sa"
                         },
                         {
                             name: "نعيمة الهاشم",
                             major: "تخصص",
-                            email: "naeema.alhashem@example.com"
+                            email: "s202271860@kfupm.edu.sa"
                         },
                         {
                             name: "يزيد الغامدي",
                             major: "تخصص",
-                            email: "yazeed.alghamdi@example.com"
+                            email: "s202243980@kfupm.edu.sa"
                         },
                         {
                             name: "محمد الحصيني",
@@ -37,17 +94,17 @@ export default function CouncilStructure({ t, lang = 'ar' }) {
                         {
                             name: "عبدالمجيد الفيفي",
                             major: "تخصص",
-                            email: "abdulmajeed.alfifi@example.com"
+                            email: "s202355890@kfupm.edu.sa"
                         },
                         {
                             name: "ريا البلوي",
                             major: "تخصص",
-                            email: "raya.albalawi@example.com"
+                            email: "s202272100@kfupm.edu.sa"
                         },
                         {
                             name: "أبرار السفياني",
                             major: "تخصص",
-                            email: "abrar.alsufyani@example.com"
+                            email: "s202268260@kfupm.edu.sa"
                         }
                     ]
                 },
@@ -56,38 +113,38 @@ export default function CouncilStructure({ t, lang = 'ar' }) {
                     members: [
                         {
                             name: "عدي باشراحيل",
-                            role: lang === 'ar' ? "قائد الفريق" : "Team Leader",
-                            email: "adai.bashraheel@example.com"
+                            role: "قائد الفريق",
+                            email: "s202183650@kfupm.edu.sa"
                         },
                         {
                             name: "سعيد الجعران",
                             major: "تخصص",
-                            email: "saeed.aljaran@example.com"
+                            email: "s202165130@kfupm.edu.sa"
                         },
                         {
                             name: "عبدالعزيز نواز",
                             major: "تخصص",
-                            email: "abdulaziz.nawaz@example.com"
+                            email: "s202279920@kfupm.edu.sa"
                         },
                         {
                             name: "مهدي المطوع",
                             major: "تخصص",
-                            email: "mahdi.almutawa@example.com"
+                            email: "s202261800@kfupm.edu.sa"
                         },
                         {
                             name: "علي المبارك",
                             major: "تخصص",
-                            email: "ali.almubarak@example.com"
+                            email: "s202258220@kfupm.edu.sa"
                         },
                         {
                             name: "جواهر العجلان",
                             major: "تخصص",
-                            email: "jawaher.alajlan@example.com"
+                            email: "s202271760@kfupm.edu.sa"
                         },
                         {
                             name: "زياد تفاحة",
                             major: "تخصص",
-                            email: "ziyad.tuffaha@example.com"
+                            email: "s202267480@kfupm.edu.sa"
                         }
                     ]
                 }
@@ -98,29 +155,29 @@ export default function CouncilStructure({ t, lang = 'ar' }) {
             name: lang === 'ar' ? "لجنة التواصل والإعلام" : "Communication & Media Committee",
             leader: {
                 name: "منيرة الدوسري",
-                email: "munira.aldosari@example.com",
+                email: "s202257120@kfupm.edu.sa",
                 major: "تخصص"
             },
             members: [
                 {
                     name: "سلمان العدوان",
                     major: "تخصص",
-                    email: "salman.aladwan@example.com"
+                    email: "s202244180@kfupm.edu.sa"
                 },
                 {
                     name: "رغد فؤاد",
                     major: "تخصص",
-                    email: "raghad.fouad@example.com"
+                    email: "s202256260@kfupm.edu.sa"
                 },
                 {
                     name: "شهد خواهر",
                     major: "تخصص",
-                    email: "shahad.khawaher@example.com"
+                    email: "s202259700@kfupm.edu.sa"
                 },
                 {
                     name: "عمر نجم",
                     major: "تخصص",
-                    email: "omar.najm@example.com"
+                    email: "s202345270@kfupm.edu.sa"
                 }
             ]
         },
@@ -129,29 +186,29 @@ export default function CouncilStructure({ t, lang = 'ar' }) {
             name: lang === 'ar' ? "لجنة التقنية والتطوير" : "Technology & Development Committee",
             leader: {
                 name: "فرح حماد",
-                email: "farah.hammad@example.com",
+                email: "s202257640@kfupm.edu.sa",
                 major: "تخصص"
             },
             members: [
                 {
                     name: "محمد الرومي",
-                    major: "تخصص",
-                    email: "mohammed.alrumi@example.com"
+                    major: "Software Engineering",
+                    email: "s202250760@kfupm.edu.sa"
                 },
                 {
                     name: "صبا الجهني",
                     major: "تخصص",
-                    email: "saba.aljohani@example.com"
+                    email: "s2023341930@kfupm.edu.sa"
                 },
                 {
                     name: "فرقان السلمان",
                     major: "تخصص",
-                    email: "furqan.alsalman@example.com"
+                    email: "s202278520@kfupm.edu.sa"
                 },
                 {
                     name: "عمر نجم",
                     major: "تخصص",
-                    email: "omar.najm@example.com"
+                    email: "s202345270@kfupm.edu.sa"
                 }
             ]
         }
@@ -203,6 +260,30 @@ export default function CouncilStructure({ t, lang = 'ar' }) {
             fontWeight: '400',
             marginBottom: '20px'
         },
+        managementSection: {
+            marginBottom: '50px',
+            backgroundColor: 'transparent',
+            padding: '30px',
+            borderRadius: '8px'
+        },
+        managementHeader: {
+            textAlign: 'center',
+            marginBottom: '30px',
+            paddingBottom: '15px',
+            borderBottom: '2px solid #0f5132'
+        },
+        managementTitle: {
+            fontSize: '1.5em',
+            marginBottom: '5px',
+            fontWeight: '600',
+            color: '#0f5132'
+        },
+        managementGrid: {
+            display: 'flex',
+            justifyContent: 'center',
+            gap: '30px',
+            flexWrap: 'wrap'
+        },
         committee: {
             marginBottom: '40px',
             backgroundColor: 'transparent',
@@ -252,7 +333,8 @@ export default function CouncilStructure({ t, lang = 'ar' }) {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            backgroundColor: '#ffffff'
+            backgroundColor: '#ffffff',
+            width: '240px'
         },
         memberPhoto: {
             width: '80px',
@@ -292,6 +374,23 @@ export default function CouncilStructure({ t, lang = 'ar' }) {
 
     const [hoveredCard, setHoveredCard] = React.useState(null);
 
+    const ManagementCard = ({ person, role }) => {
+        const initial = person.name.charAt(0);
+        return (
+            <div style={{...styles.memberCard, borderColor: '#0f5132', borderWidth: '2px'}}>
+                <div style={styles.memberPhoto}>{initial}</div>
+                <div style={styles.memberInfo}>
+                    <div style={styles.leaderBadge}>
+                        {role}
+                    </div>
+                    <div style={styles.memberName}>{getName(person.name)}</div>
+                    <div style={styles.memberMajor}>{getMajor(person.major)}</div>
+                    <div style={styles.memberEmail}>{person.email}</div>
+                </div>
+            </div>
+        );
+    };
+
     const LeaderCard = ({ leader }) => {
         const initial = leader.name.charAt(0);
         return (
@@ -301,8 +400,8 @@ export default function CouncilStructure({ t, lang = 'ar' }) {
                     <div style={styles.leaderBadge}>
                         {lang === 'ar' ? 'القائد' : 'LEADER'}
                     </div>
-                    <div style={styles.memberName}>{leader.name}</div>
-                    <div style={styles.memberMajor}>{leader.major}</div>
+                    <div style={styles.memberName}>{getName(leader.name)}</div>
+                    <div style={styles.memberMajor}>{getMajor(leader.major)}</div>
                     <div style={styles.memberEmail}>{leader.email}</div>
                 </div>
             </div>
@@ -326,8 +425,8 @@ export default function CouncilStructure({ t, lang = 'ar' }) {
             >
                 <div style={styles.memberPhoto}>{initial}</div>
                 <div style={styles.memberInfo}>
-                    <div style={styles.memberName}>{member.name}</div>
-                    <div style={styles.memberMajor}>{displayRole}</div>
+                    <div style={styles.memberName}>{getName(member.name)}</div>
+                    <div style={styles.memberMajor}>{getMajor(displayRole)}</div>
                     <div style={styles.memberEmail}>{member.email}</div>
                 </div>
             </div>
@@ -345,6 +444,26 @@ export default function CouncilStructure({ t, lang = 'ar' }) {
                     <p style={styles.sectionSubtitle}>Council's Structure</p>
                 </div>
 
+                {/* Council Management */}
+                <div style={styles.managementSection}>
+                    <div style={styles.managementHeader}>
+                        <h2 style={styles.managementTitle}>
+                            {lang === 'ar' ? 'إدارة المجلس' : 'Council Management'}
+                        </h2>
+                    </div>
+                    <div style={styles.managementGrid}>
+                        <ManagementCard
+                            person={management.president}
+                            role={lang === 'ar' ? 'قائد المجلس' : 'COUNCIL PRESIDENT'}
+                        />
+                        <ManagementCard
+                            person={management.vicePresident}
+                            role={lang === 'ar' ? 'نائب القائد' : 'VICE PRESIDENT'}
+                        />
+                    </div>
+                </div>
+
+                {/* Committees */}
                 {committees.map((committee) => (
                     <div key={committee.id} style={styles.committee}>
                         <div style={styles.committeeHeader}>
