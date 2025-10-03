@@ -9,7 +9,7 @@ export default function CouncilStructure({ t, lang = 'ar' }) {
         'سلمان العدوان': 'Salman Aladwan',
         'يزيد الغامدي': 'Yazeed Alghamdi',
         'فرح حماد': 'Farah Hammad',
-        'إياد سالم': 'Eyad Ahmed Salem',
+        'إياد سالم': 'Eyad Salem',
         'زياد تفاحة': 'Zeyad Tuffaha',
         'شهد خواهر': 'Shahad Khawaher',
         'محمد الرومي': 'Mohammed Alroomi',
@@ -18,17 +18,17 @@ export default function CouncilStructure({ t, lang = 'ar' }) {
         'أبرار السفياني': 'Abrar Alsufyani',
         'منيرة الدوسري': 'Munirah Aldawsari',
         'سعيد الجعران': 'Saeed Aljaran',
-        'ريا البلوي': 'Ria Al Balawi',
+        'ريا البلوي': 'Ria Albalawi',
         'عبدالله السيف': 'Abdullah Alsaif',
         'عبدالمجيد الفيفي': 'Abdulmajeed Alfaifi',
         'علي المبارك': 'Ali Almubarak',
         'رغد فؤاد': 'Raghad Kalantan',
         'سفانه جعر': 'Sefana Guar',
         'عمر نجم': 'Omar Nizhim',
-        'جواهر العجلان': 'Jawaher Mohammed Alajlan',
-        'محمد الحصيني': 'Mohamed Khalid Alhusini',
-        'صبا الجهني': 'Saba Salman Aljohani',
-        'حوراء الخلف': 'Hawraa Basheer Alkhalaf'
+        'جواهر العجلان': 'Jawaher Alajlan',
+        'محمد الحصيني': 'Mohamed Alhusini',
+        'صبا الجهني': 'Saba Aljohani',
+        'حوراء الخلف': 'Hawraa Alkhalaf'
     };
 
     const majors = {
