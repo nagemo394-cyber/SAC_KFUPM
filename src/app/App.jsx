@@ -188,7 +188,7 @@ export default function App(){
                                 }}>
                                     {/* X (Twitter) */}
                                     <a
-                                        href="https://x.com/kfupm_sac"
+                                        href="https://x.com/sac_kfupm"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         aria-label="X"
@@ -215,10 +215,10 @@ export default function App(){
                                             e.currentTarget.style.borderColor = '#E5E7EB'
                                             e.currentTarget.style.transform = 'translateY(0)'
                                             e.currentTarget.style.boxShadow = 'none'
-                                            e.currentTarget.querySelector('svg').style.stroke = '#111827'
+                                            e.currentTarget.querySelector('svg').style.stroke = '#00733E'
                                         }}
                                     >
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111827" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{transition: 'stroke 0.3s ease'}}>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00733E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{transition: 'stroke 0.3s ease'}}>
                                             <path d="M4 4l11.733 16h4.267l-11.733 -16z"/>
                                             <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/>
                                         </svg>
@@ -253,10 +253,10 @@ export default function App(){
                                             e.currentTarget.style.borderColor = '#E5E7EB'
                                             e.currentTarget.style.transform = 'translateY(0)'
                                             e.currentTarget.style.boxShadow = 'none'
-                                            e.currentTarget.querySelector('svg').style.stroke = '#111827'
+                                            e.currentTarget.querySelector('svg').style.stroke = '#00733E'
                                         }}
                                     >
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111827" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{transition: 'stroke 0.3s ease'}}>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00733E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{transition: 'stroke 0.3s ease'}}>
                                             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
                                             <rect x="2" y="9" width="4" height="12"/>
                                             <circle cx="4" cy="4" r="2"/>
@@ -265,7 +265,7 @@ export default function App(){
 
                                     {/* Instagram */}
                                     <a
-                                        href="https://instagram.com/kfupm_sac"
+                                        href="https://instagram.com/sac_kfupm"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         aria-label="Instagram"
@@ -292,10 +292,10 @@ export default function App(){
                                             e.currentTarget.style.borderColor = '#E5E7EB'
                                             e.currentTarget.style.transform = 'translateY(0)'
                                             e.currentTarget.style.boxShadow = 'none'
-                                            e.currentTarget.querySelector('svg').style.stroke = '#111827'
+                                            e.currentTarget.querySelector('svg').style.stroke = '#00733E'
                                         }}
                                     >
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111827" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{transition: 'stroke 0.3s ease'}}>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00733E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{transition: 'stroke 0.3s ease'}}>
                                             <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
                                             <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
                                             <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
