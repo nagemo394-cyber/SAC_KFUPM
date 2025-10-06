@@ -6,20 +6,22 @@
     <title>SAC — المجلس الاستشاري الطلابي</title>
     <meta name="theme-color" content="#00733E">
     <link rel="icon" href="/logo.png">
+
+    <!-- Google Fonts - Inter للإنجليزي -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <style>
         /* ========== Brand Fonts ========== */
         @font-face{
             font-family:'CouncilArabic';
-            src: url('public/fonts/council-ar.ttf') format('truetype');
+            src: url('/fonts/council-ar.ttf') format('truetype');
             font-display: swap;
             font-weight: 400 900;
         }
-        @font-face{
-            font-family:'CouncilEnglish';
-            src: url('public/fonts/council-en.ttf') format('truetype');
-            font-display: swap;
-            font-weight: 400 900;
-        }
+
+        /* استخدم Inter من Google Fonts للإنجليزي */
 
         :root{
             --primary:#00733E;
@@ -55,9 +57,25 @@
             margin:0;
             background:#f8fafc;
             color:var(--text);
-            font-family:'CouncilEnglish','CouncilArabic','Inter','Tajawal',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+            font-family:'CouncilArabic','Inter','Tajawal',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
             overflow-x: hidden;
             font-weight: 400;
+        }
+
+        /* تحسين الخطوط للإنجليزي */
+        html[lang="en"] body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        html[lang="en"] h1,
+        html[lang="en"] h2,
+        html[lang="en"] h3,
+        html[lang="en"] h4,
+        html[lang="en"] h5,
+        html[lang="en"] h6,
+        html[lang="en"] .hd {
+            font-weight: 800 !important;
+            letter-spacing: -0.02em;
         }
 
         /* ========== Remove Animated Background ========== */
@@ -76,16 +94,39 @@
             -webkit-tap-highlight-color: transparent;
         }
 
+        /*.container{*/
+        /*    max-width:1100px;*/
+        /*    margin:0 auto;*/
+        /*    padding:20px;*/
+        /*}*/
         .container{
             max-width:1100px;
             margin:0 auto;
-            padding:20px;
+            padding:20px;        /* تم حذف padding-top */
+        }
+        /* تعويض ثابت لارتفاع الهيدر */
+        .page{
+            padding-top:80px;    /* عدّلها لارتفاع الهيدر الفعلي إذا لزم */
         }
 
+
+
         /* ========== Navbar with Glassmorphism ========== */
+        /*.nav{*/
+        /*    position:sticky;*/
+        /*    top:0;*/
+        /*    background:rgba(255, 255, 255, 0.85);*/
+        /*    backdrop-filter:blur(12px) saturate(180%);*/
+        /*    border-bottom:1px solid rgba(0, 115, 62, 0.1);*/
+        /*    z-index:100;*/
+        /*    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);*/
+        /*    animation: slideDown 0.5s ease-out;*/
+        /*}*/
         .nav{
-            position:sticky;
+            position:fixed;
             top:0;
+            left:0;
+            right:0;
             background:rgba(255, 255, 255, 0.85);
             backdrop-filter:blur(12px) saturate(180%);
             border-bottom:1px solid rgba(0, 115, 62, 0.1);
@@ -126,8 +167,8 @@
         }
 
         .brand img{
-            width:44px;
-            height:44px;
+            width:50px;
+            height:50px;
             object-fit:contain;
         }
 
@@ -367,7 +408,7 @@
             padding:14px 24px;
             background:#00733E;
             color:#fff;
-            font-family:'CouncilArabic','CouncilEnglish','Inter','Tajawal',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif !important;
+            font-family:'CouncilArabic','Inter','Tajawal',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif !important;
             font-weight:700;
             font-size:16px;
             letter-spacing:.3px;
@@ -456,7 +497,7 @@
             background:#fff;
             outline:none;
             transition: all 0.3s ease;
-            font-family: 'CouncilArabic','CouncilEnglish','Inter','Tajawal', sans-serif;
+            font-family: 'CouncilArabic','Inter','Tajawal', sans-serif;
         }
 
         input:hover, textarea:hover {
@@ -471,7 +512,7 @@
 
         input::placeholder,
         textarea::placeholder {
-            font-family: 'CouncilArabic','CouncilEnglish','Inter','Tajawal', sans-serif;
+            font-family: 'CouncilArabic','Inter','Tajawal', sans-serif;
             font-weight: 400;
             color: #9CA3AF;
         }
@@ -489,7 +530,7 @@
             border-radius:999px;
             background:#F9FAFB;
             cursor:pointer;
-            font-family: 'CouncilArabic','CouncilEnglish','Inter','Tajawal', sans-serif;
+            font-family: 'CouncilArabic','Inter','Tajawal', sans-serif;
             font-weight: 600;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -580,10 +621,6 @@
             }
         }
 
-        @keyframes pulse {
-            /* removed */
-        }
-
         /* ========== Utilities ========== */
         .rtl{direction:rtl}
         .ltr{direction:ltr}
@@ -604,10 +641,21 @@
                 padding: 16px;
             }
 
+            /*.nav {*/
+            /*    position: sticky;*/
+            /*    top: 0;*/
+            /*}*/
+
             .nav {
-                position: sticky;
-                top: 0;
+                position: relative;
+                background: rgba(255, 255, 255, 0.85);
+                backdrop-filter: blur(12px) saturate(180%);
+                border-bottom: 1px solid rgba(0, 115, 62, 0.1);
+                z-index: 10;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+                animation: slideDown 0.5s ease-out;
             }
+
 
             .nav-inner {
                 display: grid;
@@ -736,6 +784,147 @@
         @keyframes spin {
             to { transform: rotate(360deg); }
         }
+
+
+        /* ===== الجوال فقط ===== */
+        @media (max-width: 768px) {
+            .nav {
+                position: relative !important; /* مو ثابت */
+                top: auto;
+                left: auto;
+                right: auto;
+                z-index: 10;
+            }
+
+            .container {
+                padding-top: 0 !important; /* ما نحتاج تعويض */
+            }
+        }
+
+        /* إصلاح التفاف العناصر في الجوال ومنع أي عنصر يتمطط بعرض أكبر من الشاشة */
+        @media (max-width: 768px) {
+            .row {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                flex-wrap: nowrap;
+            }
+            .row > * {
+                width: 100% !important;
+                flex: 1 1 100% !important;
+                min-width: 0 !important;     /* مهم جداً لمنع التمدد داخل flex/grid */
+                max-width: 100% !important;
+            }
+
+            /* أي grid ثنائي الأعمدة خليها عمود واحد */
+            [style*="grid-template-columns"] {
+                grid-template-columns: 1fr !important;
+            }
+
+            /* تأكد أن الحاويات ما تسبب تمدد أفقي */
+            .paper, .bd, .container {
+                overflow-x: clip;    /* يمنع ظهور تمطط داخلي بدون كسر التخطيط */
+            }
+
+            /* مدخلات ونصوص ما تتجاوز العرض */
+            input, textarea, .chip, .btn {
+                max-width: 100%;
+            }
+        }
+
+
+
+
+
+
+
+        /* ===== تحسين الهيدر على الجوال ===== */
+        @media (max-width: 768px) {
+            /* الهيدر جزء من الصفحة (مو ثابت في الجوال) */
+            .nav {
+                position: relative !important;
+                top: auto; left: auto; right: auto;
+                z-index: 10;
+                background: #fff;
+                border-bottom: 1px solid #e5e7eb;
+                box-shadow: none;
+            }
+
+            /* ترتيب داخلي للهيدر */
+            .nav-inner {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 16px;
+                padding: 16px;
+                align-items: center;
+                justify-items: center; /* كل شيء بالنص */
+            }
+
+            /* الهوية: الشعار + النص */
+            .brand {
+                display: grid;
+                grid-auto-flow: column;
+                align-items: center;
+                gap: 12px;
+                justify-content: center;
+                text-align: center;
+            }
+            .brand img {
+                width: 52px;   /* كبّر الشعار */
+                height: 52px;
+                object-fit: contain;
+            }
+            .ttl {
+                font-size: 18px;
+                font-weight: 800;
+                letter-spacing: .2px;
+            }
+
+            /* الروابط: شبكتين */
+            .links {
+                display: grid;
+                grid-template-columns: 1fr 1fr; /* عمودان */
+                gap: 10px;
+                width: 100%;
+            }
+            .link {
+                padding: 12px 10px;
+                text-align: center;
+                border-radius: 12px;
+                font-size: 14px;
+                font-weight: 600;
+                border: 1px solid #e5e7eb;
+            }
+            .link.active {
+                background: #e7f5ee;     /* أخضر فاتح */
+                border-color: #00733E;
+                color: #0b5c35;
+                box-shadow: 0 4px 14px rgba(0,115,62,.15);
+            }
+
+            /* أزرار اللغة */
+            .lang {
+                display: grid;
+                grid-auto-flow: column;
+                gap: 8px;
+                justify-content: center;
+                align-items: center;
+            }
+            .lang span { display: none; } /* نخفي النص "اللغة" */
+            .lang button {
+                padding: 8px 16px;
+                font-size: 13px;
+                border-radius: 999px;
+            }
+
+            /* منع أي تمدد أفقي يسبب قصّ */
+            .row > * { min-width: 0; }
+            img, svg { max-width: 100%; height: auto; }
+        }
+
+
+
+
     </style>
 </head>
 <body>

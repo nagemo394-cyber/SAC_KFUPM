@@ -12,12 +12,12 @@ const STRINGS = {
         complaints:"Complaints & Suggestions",
         achievements:"Achievements",
         structure:"Council Structure",
-        heroTitle:"Welcome to the official website of the Student Advisory Council at KFUPM",
-        heroBody:"This platform lets you browse the council's info and submit complaints easily.",
+        heroTitle:"The Student Advisory Council, affiliated with the Deanship of Student Affairs at KFUPM",
+        heroBody:"Represents the voice of students and reinforces their role in the decision-making process.",
         ctaComplaints:"Go to Complaints",
         ctaLearn:"Learn more",
         footerNote:"All rights reserved",
-        lang:"Language",
+        // lang:"Language",
         followUs:"Follow Us",
         university:"King Fahd University of Petroleum & Minerals"
     },
@@ -32,7 +32,7 @@ const STRINGS = {
         ctaComplaints:"الذهاب لصفحة الشكاوى والمقترحات",
         ctaLearn:"اعرف المزيد",
         footerNote:"جميع الحقوق محفوظة",
-        lang:"اللغة",
+        // lang:"اللغة",
         followUs:"تابعنا",
         university:"جامعة الملك فهد للبترول والمعادن"
     }
@@ -52,13 +52,194 @@ export default function App(){
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
+    // useEffect(() => {
+    //     document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr'
+    //     document.documentElement.lang = lang
+    //     localStorage.setItem('lang', lang)
+    //     document.body.style.fontFamily = (lang === 'ar')
+    //         ? `'CouncilArabic','CouncilEnglish','Tajawal','Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif`
+    //         : `'CouncilEnglish','CouncilArabic','Inter','Tajawal',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif`
+    // }, [lang])
+    // useEffect(() => {
+    //     document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr'
+    //     document.documentElement.lang = lang
+    //     localStorage.setItem('lang', lang)
+    //
+    //     // تطبيق الخط المناسب
+    //     if (lang === 'ar') {
+    //         document.body.style.fontFamily = `'CouncilArabic', 'Tajawal', -apple-system, sans-serif`
+    //     } else {
+    //         document.body.style.fontFamily = `'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif`
+    //     }
+    //
+    //     // إضافة CSS ديناميكي للعناوين بالإنجليزي
+    //     let styleElement = document.getElementById('dynamic-typography')
+    //     if (!styleElement) {
+    //         styleElement = document.createElement('style')
+    //         styleElement.id = 'dynamic-typography'
+    //         document.head.appendChild(styleElement)
+    //     }
+    //
+    //     // if (lang === 'en') {
+    //     //     styleElement.textContent = `
+    //     //     * {
+    //     //         font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    //     //     }
+    //     //     h1, h2, h3, h4, h5, h6, .hd {
+    //     //         font-weight: 800 !important;
+    //     //         letter-spacing: -0.025em !important;
+    //     //     }
+    //     //     .hero h1 {
+    //     //         font-weight: 900 !important;
+    //     //     }
+    //     //     .card h3 {
+    //     //         font-weight: 700 !important;
+    //     //     }
+    //     // `
+    //     // }
+    //
+    //     // else {
+    //     //     styleElement.textContent = `
+    //     //     * {
+    //     //         font-family: 'CouncilArabic', 'Tajawal', -apple-system, sans-serif !important;
+    //     //     }
+    //     // `
+    //     // }
+    //     if (lang === 'en') {
+    //         styleElement.textContent = `
+    //     body, p, div, span {
+    //         font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    //     }
+    //     .hero h1 {
+    //         font-size: 28px !important;
+    //         font-weight: 700 !important;
+    //         letter-spacing: -0.02em !important;
+    //     }
+    //     .card h3 {
+    //         font-size: 18px !important;
+    //         font-weight: 600 !important;
+    //     }
+    //     .hd {
+    //         font-size: 16px !important;
+    //         font-weight: 700 !important;
+    //     }
+    //     .link {
+    //         font-size: 14px !important;
+    //     }
+    //     .nav {
+    //         font-size: 14px !important;
+    //     }
+    // `
+    //     } else {
+    //         styleElement.textContent = ''
+    //     }
+    // }, [lang])
+
+    // useEffect(() => {
+    //     document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr'
+    //     document.documentElement.lang = lang
+    //     localStorage.setItem('lang', lang)
+    //
+    //     // إضافة transition للـ body
+    //     document.body.style.transition = 'font-family 0.3s ease, font-size 0.3s ease'
+    //
+    //     // تطبيق الخط المناسب
+    //     if (lang === 'ar') {
+    //         document.body.style.fontFamily = `'CouncilArabic', 'Tajawal', -apple-system, sans-serif`
+    //     } else {
+    //         document.body.style.fontFamily = `'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif`
+    //     }
+    //
+    //     // إضافة CSS ديناميكي للعناوين بالإنجليزي
+    //     let styleElement = document.getElementById('dynamic-typography')
+    //     if (!styleElement) {
+    //         styleElement = document.createElement('style')
+    //         styleElement.id = 'dynamic-typography'
+    //         document.head.appendChild(styleElement)
+    //     }
+    //
+    //     if (lang === 'en') {
+    //         styleElement.textContent = `
+    //         * {
+    //             transition: font-size 0.2s ease, font-weight 0.2s ease;
+    //         }
+    //         body, p, div, span {
+    //             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    //         }
+    //         .hero h1 {
+    //             font-size: 28px !important;
+    //             font-weight: 700 !important;
+    //             letter-spacing: -0.02em !important;
+    //         }
+    //         .card h3 {
+    //             font-size: 18px !important;
+    //             font-weight: 600 !important;
+    //         }
+    //         .hd {
+    //             font-size: 16px !important;
+    //             font-weight: 700 !important;
+    //         }
+    //         .link {
+    //             font-size: 14px !important;
+    //         }
+    //         .nav {
+    //             font-size: 14px !important;
+    //         }
+    //     `
+    //     } else {
+    //         styleElement.textContent = `
+    //         * {
+    //             transition: font-size 0.2s ease, font-weight 0.2s ease;
+    //         }
+    //     `
+    //     }
+    // }, [lang])
+
     useEffect(() => {
         document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr'
         document.documentElement.lang = lang
         localStorage.setItem('lang', lang)
-        document.body.style.fontFamily = (lang === 'ar')
-            ? `'CouncilArabic','CouncilEnglish','Tajawal','Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif`
-            : `'CouncilEnglish','CouncilArabic','Inter','Tajawal',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif`
+
+        // تطبيق الخط المناسب
+        if (lang === 'ar') {
+            document.body.style.fontFamily = `'CouncilArabic', 'Tajawal', -apple-system, sans-serif`
+        } else {
+            document.body.style.fontFamily = `'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif`
+        }
+
+        // إضافة CSS ديناميكي للعناوين بالإنجليزي
+        let styleElement = document.getElementById('dynamic-typography')
+        if (!styleElement) {
+            styleElement = document.createElement('style')
+            styleElement.id = 'dynamic-typography'
+            document.head.appendChild(styleElement)
+        }
+
+        if (lang === 'en') {
+            styleElement.textContent = `
+            body, p, div, span {
+                font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+            }
+            .hero h1 {
+                font-size: 28px !important;
+                font-weight: 700 !important;
+                letter-spacing: -0.02em !important;
+            }
+            .card h3 {
+                font-size: 18px !important;
+                font-weight: 600 !important;
+            }
+            .hd {
+                font-size: 16px !important;
+                font-weight: 700 !important;
+            }
+            .link {
+                font-size: 14px !important;
+            }
+        `
+        } else {
+            styleElement.textContent = ''
+        }
     }, [lang])
 
     const t = useMemo(() => STRINGS[lang], [lang])
@@ -66,11 +247,25 @@ export default function App(){
 
     return (
         <div>
+            {/*<nav className="nav" style={{*/}
+            {/*    boxShadow: scrolled ? '0 8px 30px rgba(0, 0, 0, 0.12)' : '0 4px 20px rgba(0, 0, 0, 0.05)',*/}
+            {/*    transition: 'all 0.3s ease'*/}
+            {/*}}>*/}
             <nav className="nav" style={{
-                boxShadow: scrolled ? '0 8px 30px rgba(0, 0, 0, 0.12)' : '0 4px 20px rgba(0, 0, 0, 0.05)',
-                transition: 'all 0.3s ease'
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                right: 0,
+                width: '100%',
+                zIndex: 9999,
+                boxShadow: scrolled
+                    ? '0 8px 30px rgba(0, 0, 0, 0.12)'
+                    : '0 4px 20px rgba(0, 0, 0, 0.05)',
+                transition: 'box-shadow 0.3s ease'
             }}>
-                <div className="nav-inner container">
+
+
+            <div className="nav-inner container">
                     <Link to="/" className="brand">
                         <img src="/logo.png" alt="Council logo" />
                         <div>
@@ -92,14 +287,14 @@ export default function App(){
 
                     <div className="lang">
                         <span style={{fontSize: 12, color: '#6b7280', fontWeight: '600'}}>{t.lang}</span>
-                        <button className={lang === 'ar' ? 'active' : ''} onClick={() => setLang('ar')} style={{fontFamily: 'CouncilArabic, Tajawal, sans-serif'}}>العربية</button>
-                        <button className={lang === 'en' ? 'active' : ''} onClick={() => setLang('en')} style={{fontFamily: 'Inter, sans-serif'}}>English</button>
+                        <button className={lang === 'ar' ? 'active' : ''} onClick={() => setLang('ar')} style={{fontFamily: 'CouncilArabic, Tajawal, sans-serif'}}>AR</button>
+                        <button className={lang === 'en' ? 'active' : ''} onClick={() => setLang('en')} style={{fontFamily: 'Inter, sans-serif'}}>EN</button>
                     </div>
                 </div>
             </nav>
 
-            <div className="container">
-                <div className={lang === 'ar' ? 'rtl' : 'ltr'}>
+            <div className="container" style={{paddingTop: '100px'}}>
+            <div className={lang === 'ar' ? 'rtl' : 'ltr'}>
                     <Routes>
                         <Route path="/" element={<Home t={t} lang={lang} navigate={navigate} />} />
                         <Route path="/complaints" element={<Complaints t={t} lang={lang} />} />
@@ -188,7 +383,7 @@ export default function App(){
                                 }}>
                                     {/* X (Twitter) */}
                                     <a
-                                        href="https://x.com/sac_kfupm"
+                                        href="https://x.com/kfupm_sac"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         aria-label="X"
@@ -225,47 +420,47 @@ export default function App(){
                                     </a>
 
                                     {/* LinkedIn */}
-                                    <a
-                                        href="https://linkedin.com/company/sac-kfupm"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        aria-label="LinkedIn"
-                                        style={{
-                                            width: '44px',
-                                            height: '44px',
-                                            borderRadius: '10px',
-                                            background: '#F9FAFB',
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            justifyContent: 'center',
-                                            transition: 'all 0.3s ease',
-                                            border: '2px solid #E5E7EB'
-                                        }}
-                                        onMouseEnter={(e) => {
-                                            e.currentTarget.style.background = '#0A66C2'
-                                            e.currentTarget.style.borderColor = '#0A66C2'
-                                            e.currentTarget.style.transform = 'translateY(-3px)'
-                                            e.currentTarget.style.boxShadow = '0 4px 12px rgba(10,102,194,0.3)'
-                                            e.currentTarget.querySelector('svg').style.stroke = '#FFFFFF'
-                                        }}
-                                        onMouseLeave={(e) => {
-                                            e.currentTarget.style.background = '#F9FAFB'
-                                            e.currentTarget.style.borderColor = '#E5E7EB'
-                                            e.currentTarget.style.transform = 'translateY(0)'
-                                            e.currentTarget.style.boxShadow = 'none'
-                                            e.currentTarget.querySelector('svg').style.stroke = '#00733E'
-                                        }}
-                                    >
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00733E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{transition: 'stroke 0.3s ease'}}>
-                                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                                            <rect x="2" y="9" width="4" height="12"/>
-                                            <circle cx="4" cy="4" r="2"/>
-                                        </svg>
-                                    </a>
+                                    {/*<a*/}
+                                    {/*    href="https://linkedin.com/company/sac-kfupm"*/}
+                                    {/*    target="_blank"*/}
+                                    {/*    rel="noopener noreferrer"*/}
+                                    {/*    aria-label="LinkedIn"*/}
+                                    {/*    style={{*/}
+                                    {/*        width: '44px',*/}
+                                    {/*        height: '44px',*/}
+                                    {/*        borderRadius: '10px',*/}
+                                    {/*        background: '#F9FAFB',*/}
+                                    {/*        display: 'flex',*/}
+                                    {/*        alignItems: 'center',*/}
+                                    {/*        justifyContent: 'center',*/}
+                                    {/*        transition: 'all 0.3s ease',*/}
+                                    {/*        border: '2px solid #E5E7EB'*/}
+                                    {/*    }}*/}
+                                    {/*    onMouseEnter={(e) => {*/}
+                                    {/*        e.currentTarget.style.background = '#0A66C2'*/}
+                                    {/*        e.currentTarget.style.borderColor = '#0A66C2'*/}
+                                    {/*        e.currentTarget.style.transform = 'translateY(-3px)'*/}
+                                    {/*        e.currentTarget.style.boxShadow = '0 4px 12px rgba(10,102,194,0.3)'*/}
+                                    {/*        e.currentTarget.querySelector('svg').style.stroke = '#FFFFFF'*/}
+                                    {/*    }}*/}
+                                    {/*    onMouseLeave={(e) => {*/}
+                                    {/*        e.currentTarget.style.background = '#F9FAFB'*/}
+                                    {/*        e.currentTarget.style.borderColor = '#E5E7EB'*/}
+                                    {/*        e.currentTarget.style.transform = 'translateY(0)'*/}
+                                    {/*        e.currentTarget.style.boxShadow = 'none'*/}
+                                    {/*        e.currentTarget.querySelector('svg').style.stroke = '#00733E'*/}
+                                    {/*    }}*/}
+                                    {/*>*/}
+                                    {/*    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00733E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{transition: 'stroke 0.3s ease'}}>*/}
+                                    {/*        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>*/}
+                                    {/*        <rect x="2" y="9" width="4" height="12"/>*/}
+                                    {/*        <circle cx="4" cy="4" r="2"/>*/}
+                                    {/*    </svg>*/}
+                                    {/*</a>*/}
 
                                     {/* Instagram */}
                                     <a
-                                        href="https://instagram.com/sac_kfupm"
+                                        href="https://instagram.com/kfupm_sac"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         aria-label="Instagram"
