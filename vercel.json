@@ -1,0 +1,4 @@
+{
+  "framework": "vite",
+  "buildCommand": "npm ci && npm run build"
+}
